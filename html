@@ -1,0 +1,52 @@
+<head>
+  <meta charset="UTF-8" />
+  <title>Professional To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="app-container">
+    <!-- LEFT SECTION -->
+    <div class="left-panel">
+      <h2>Create Task</h2>
+      <form id="taskForm">
+        <label>Task</label>
+        <input type="text" id="taskInput" required />
+
+        <label>Priority</label>
+        <select id="priorityInput" required>
+          <option value="low">Low</option>
+          <option value="moderate">Moderate</option>
+          <option value="high">High</option>
+        </select>
+
+        <label>Deadline</label>
+        <input type="date" id="deadlineInput" required />
+
+        <button type="submit">Add Task</button>
+      </form>
+    </div>
+
+    <!-- RIGHT SECTION -->
+    <div class="right-panel">
+      <div class="column low" data-priority="low">
+        <div class="column-header">Low (<span class="count">0</span>)</div>
+        <div class="task-list"></div>
+      </div>
+
+      <div class="column moderate" data-priority="moderate">
+        <div class="column-header">Moderate (<span class="count">0</span>)</div>
+        <div class="task-list"></div>
+      </div>
+
+      <div class="column high" data-priority="high">
+        <div class="column-header">High (<span class="count">0</span>)</div>
+        <div class="task-list"></div>
+      </div>
+    </div>
+  </div>
+
+  <button type="button" id="markAllBtn">Mark All as Complete</button>
+
+</body>
